@@ -1,0 +1,14 @@
+@TechnologyName = Azure%20Functions
+@hostname = localhost
+@port = 7071
+@Host = {{hostname}}:{{port}}
+@Route = whatis
+
+###
+
+GET http://{{Host}}/api/{{Route}}/{{TechnologyName}} HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:7071/api/whatis/{TechnologyName}
+Content-Type: application/json
